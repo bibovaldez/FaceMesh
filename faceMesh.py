@@ -26,7 +26,7 @@ def main():
     cap = cv2.VideoCapture(0)
     detector = FaceMeshDetector()
 
-    while True:
+    while cap.isOpened():
         success, img = cap.read()
         img = detector.findFaceMesh(img)
         detector.findFaceMesh(img)
